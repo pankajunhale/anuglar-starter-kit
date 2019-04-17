@@ -1,0 +1,11 @@
+<div>
+     <div class="input-group date">
+        <input type="text" [(ngModel)]="SelectedDate" class="form-control input-sm" id="{{id}}" (focus)="OpenCalendar()" />
+        <span class="input-group-addon" (click)="OpenCalendar()">
+            <span class="glyphicon-calendar glyphicon"></span>
+        </span>
+     </div>
+</div>
+<div class="dp-popup" *ngIf="ShowDatepicker">
+    <datepicker [(ngModel)]="CalendarDate" [showWeeks]="true" (selectionDone)="OnSelectionDone($event)"></datepicker>
+</div>

@@ -1,0 +1,19 @@
+<cdk-virtual-scroll-viewport itemSize="60" (scrolledIndexChange)="nextBatch($event, (people[people.length - 1].name))">
+
+
+  <li *cdkVirtualFor="let VirtualScroll of VirtualScrollList; let i = index; trackBy: trackByIdx" class="animated lightSpeedIn">
+    <div class="desc">
+        <img class="mapicon" src="../../../assets/img/placeholder_map_marker_position_pinpoint-512.png">  
+      Country Name : <br>
+      <div class="countryname">
+        
+        {{ VirtualScroll.Title }}
+      </div>
+    </div>
+      <div class="detail"> Country code : <br> {{ VirtualScroll.Item.code }} </div>
+  </li>
+
+  <!-- <iframe *ngIf="theEnd" src="https://giphy.com/embed/lD76yTC5zxZPG" width="480"
+    height="352" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
+
+</cdk-virtual-scroll-viewport>

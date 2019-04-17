@@ -1,0 +1,16 @@
+    <div class="row">    
+        <div class="docs-container">
+            <div class="docs-primary-header">
+                <h1>Bootstrap Dropdown Widget</h1>
+            </div>
+        </div>     
+        <div class="col-lg-12">           
+            <div> 
+            <bootstrap-dropdown-widget
+              [ActiveItemOnInit]="ActiveItemOnInit"
+              [options]="options"
+              (OnItemSelect)="OnItemSelect($event)">
+            </bootstrap-dropdown-widget>
+            </div>
+        </div>
+    </div>
